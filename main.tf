@@ -16,8 +16,11 @@ module "ec2_instance" {
   root_block_device      = var.root_block_device
 
   tags = {
-    Terraform   = "true"
-    Environment = "dev"
+    Name        = var.aws_dbsvr_tag_name
+    Environment = var.aws_dbsvr_tag_env
+    Account     = var.aws_dbsvr_tag_acct
+    Task        = var.aws_dbsvr_tag_task
+    Initiator   = var.aws_dbsvr_tag_initr
   }
 }
 

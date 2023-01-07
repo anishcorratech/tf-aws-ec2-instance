@@ -46,6 +46,32 @@ variable "keyname" {
   default = "corrakochi"
 }
 
+variable "aws_dbsvr_tag_name" {
+  type = string
+  description = "Add a Tag entry for name on DB Instance"
+}
+
+variable "aws_dbsvr_tag_env" {
+  type = string
+  description = "Add a Tag entry for environment on DB Instance"
+}
+
+variable "aws_dbsvr_tag_acct" {
+  type = string
+  description = "Enter the name of Total Care or Project Account Name"
+}
+
+variable "aws_dbsvr_tag_task" {
+  type = string
+  description = "Enter the JIRA ticket number of Total Care or Project A
+ccount task"
+}
+
+variable "aws_dbsvr_tag_initr" {
+  type = string
+  description = "Enter the your Name"
+}
+
 variable "root_block_device" {
   type = list(map(string))
   description = "Enter the SSH keypair Name to be used to create the server"
