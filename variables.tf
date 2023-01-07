@@ -72,15 +72,8 @@ variable "aws_dbsvr_tag_initr" {
 }
 
 variable "root_block_device" {
-  type = list(map(string))
-  description = "Enter the SSH keypair Name to be used to create the server"
-  default = [
-    {
-        volume_type           = "gp2"
-        volume_size           = 10
-        delete_on_termination = "true"
-        encypted              = "false"
-    }
-]
+    description = "The root block device for the instance"
+    type = list(map(string))
+    default  =[]
 }
 
