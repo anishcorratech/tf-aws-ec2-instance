@@ -63,8 +63,7 @@ variable "aws_dbsvr_tag_acct" {
 
 variable "aws_dbsvr_tag_task" {
   type = string
-  description = "Enter the JIRA ticket number of Total Care or Project A
-ccount task"
+  description = "Enter the JIRA ticket number of Total Care or Project Account task"
 }
 
 variable "aws_dbsvr_tag_initr" {
